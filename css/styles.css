@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap');
+
+
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* global styles */
+:root {
+    --StrongCyan: hsl(171, 66%, 44%);
+    --LightBlue: hsl(233, 100%, 69%);
+    --DarkGrayishBlue: hsl(210, 10%, 33%);
+    --GrayishBlue: hsl(201, 11%, 66%);
+}
+
+
+.attribution { 
+    font-size: 12px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+h1,h2,h3,h4 {
+    color: var(--DarkGrayishBlue);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    color: var(--GrayishBlue);
+}
+
+button {
+    padding: .7rem 2rem;
+    text-align: center;
+    margin-left: .5rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* end of global styles */
+
+/*  banner */
+.intro {
+    width: 100%;
+    background: url('../images/bg-header-desktop.png')center/cover no-repeat;
+    height: 25rem;
+    padding-top: 10rem;
+}
+
+
+.intro .baaner-info h1 {
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.intro .baaner-info p {
+    line-height: 1.2rem;
+}
+
+.intro .btns, .bottom .btn{
+    margin: 2rem;
+}
+
+.intro .ios, .bottom .ios {
+    background: var(--StrongCyan);
+    color: #fff;
+    border-radius: 2rem;
+    box-shadow: 5px 5px 5px rgba(18, 153, 86, 0.801);
+    font-weight: 700;
+}
+
+
+.intro .mac, .bottom .mac {
+    background: var(--LightBlue);
+    border-radius: 2rem;
+    color: #fff;
+    box-shadow: 5px 5px 5px rgba(18, 88, 153, 0.801);
+    font-weight: 700;
+}
+
+.intro .ios:hover,.intro .mac:hover,
+.bottom .mac:hover, .bottom .ios:hover {
+    opacity: .7;
+    transition: all .5s linear;
+    padding: 1rem 1rem;
+}
+
+/* quary for desktop */
+@media screen and (max-width: 800px) {
+    .intro .ios, .bottom .ios {
+        margin-bottom: .7rem;
+    }
+}
+/* end of banner */
+/* snippets */
+.snippets {
+    margin-top: 10rem;
+}
+
+.snippets .title h1{
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.snippets .title p {
+    line-height: 1.5rem;
+}
+
+.snippets .snippets-info {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.snippets-info .img img {
+        width: 100%;
+}
+
+.snippets .snippets-content p {
+    padding: 1rem;
+}
+
+.snippets .snippets-content > div {
+    padding: 1rem;
+}
+
+/* quary for desktop */
+@media screen and (max-width: 800px) {
+    .snippets {
+        margin-top: 7rem;
+    }
+    .snippets .snippets-info {
+        grid-template-columns: 1fr;
+        
+    }
+
+    .snippets-info .img img {
+        width: 70%;
+    }
+}
+/* end of snippets */
+/* access clipboard*/
+.clipboard {
+    margin-top: 7rem;
+}
+
+.clipboard .clipboard-title h1 {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.clipboard .clipboard-title p {
+    line-height: 1.5rem;
+}
+
+.clipboard .clipboard-img {
+    margin-top: 1.5rem;
+}
+
+/* quary for desktop */
+@media screen and (max-width: 800px) {
+    .clipboard {
+        margin-top: 2rem;
+    }
+    .clipboard .clipboard-img img{
+        width: 100%;
+    }
+}
+/* end of access clipboard*/
+/* workflow */
+.workflow {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.workflow .workflow-tile h1 {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.workflow-content {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.workflow-content h3 {
+    padding: 1rem;
+}
+
+.workflow-content > div:hover{
+    box-shadow: 4px 4px 4px rgba(18, 88, 153, 0.801);
+    transition: all .5s linear;
+    cursor: pointer;
+}
+
+.workflow-content > div {
+    padding: 1rem;
+}
+
+
+.workflow .brand {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 2rem;
+}
+
+.workflow .brand >div:hover {
+    box-shadow: 4px 4px 4px rgba(18, 153, 86, 0.801);
+    transition: all .5s ease-in;
+}
+
+/* quary for desktop */
+@media screen and (max-width: 800px) {
+    .workflow-content {
+        grid-template-columns: 1fr;
+    }
+
+    .workflow .brand{
+        grid-template-columns: 1fr;
+    }
+}
+/* end of workflow */
+.bottom {
+    margin-top: 5rem;
+}
+
+.bottom .title h1 {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.bottom .title  p {
+    line-height: 1.5rem;
+}
+
+/* footer */
+footer {
+    margin-top: 6rem;
+    color: var(--GrayishBlue);
+    min-height: 15vh;
+    background: rgba(207, 194, 194, 0.541);
+}
+
+footer .footer {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding-top: 1rem;
+}
+
+footer .footer .navs, footer .footer .icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer a {
+    color: var(--DarkGrayishBlue);
+}
+
+footer .footer .navs li {
+    padding: .5rem;
+}
+
+footer .footer .icons i { 
+    color: var(--DarkGrayishBlue);
+    font-size: 1.5rem;
+    padding: 0 1rem;
+}
+
+footer .footer .icons i:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+/* quary for desktop */
+@media screen and (max-width: 800px) {
+    footer .footer {
+        grid-template-columns: 1fr;
+    }
+
+    footer .footer .navs {
+        flex-direction: column;
+    }
+
+    footer .footer .icons {
+        margin-top: .5rem;
+    }
+}
